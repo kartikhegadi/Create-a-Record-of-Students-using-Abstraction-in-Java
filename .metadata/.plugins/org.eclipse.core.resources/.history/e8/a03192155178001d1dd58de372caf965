@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class PartTimer implements StudentInterface{
+	
+	
+	String name="QT";
+	String subs[]=new String[maxcourses];
+	Scanner s=new Scanner(System.in);
+
+	@Override
+	public String name_id() {
+		
+		return name;
+	}
+
+	@Override
+	public String[] subjects() {
+		
+		for(int i=0;i<maxcourses;i++)
+		{
+			System.out.println("Tyoe course name \n");
+			subs[i]=s.next();
+		}
+		return subs;
+	}
+	
+	public void output()
+	{
+		System.out.println("Name"+name);
+		System.out.println("Courses");
+		for(int i=0;i<maxcourses;i++)
+		{
+		 System.out.println(subs[i]);
+		}
+	}
+	
+	
+
+}
